@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin dashboard</title>
+  </head>
+  <style>
+    body {
+      margin: 0px;
+    }
+    svg {
+      height: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+    }
+
+    .menu-bar {
+      background-color: aqua;
+      height: 100vh;
+      min-width: 180px;
+      max-width: 300px;
+    }
+
+    .top-row {
+      padding-top: 15px;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: row;
+      background-color: blue;
+      height: 100px;
+      justify-content: flex-start;
+    }
+    .feather-search {
+      height: 20px;
+    }
+    .feather-bell {
+      height: 20px;
+      margin-left: 15px;
+    }
+    .feather-users {
+      margin-left: 10px;
+    }
+    .feather-users:hover {
+      cursor: pointer;
+    }
+    .search-box {
+      background-color: rgb(235, 233, 233);
+      height: 20px;
+      margin-left: 20px;
+      min-width: 50vw;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 20px;
+    }
+    .search-box:focus {
+      outline: none;
+    }
+    .profile {
+      flex: 0 0 auto;
+      margin-left: auto;
+      margin-right: 107px;
+      background-color: blueviolet;
+    }
+    .Name {
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="menu-bar"></div>
+      <div class="top-row">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather-search"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input class="search-box" type="text" />
+        <div class="profile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather-bell"
+          >
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather-users"
+          >
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <p class="Name">Morgan Stanley</p>
+        </div>
+      </div>
+      <div class="dashboard-grid"></div>
+    </div>
+  </body>
+</html>
