@@ -17,6 +17,7 @@
     .container {
       display: grid;
       grid-template-columns: 180px 1fr;
+      grid-template-rows: 55px 40px 40px calc(100vh - 135px);
     }
 
     .menu-bar {
@@ -30,11 +31,13 @@
       padding-top: 15px;
       padding-left: 10px;
       display: flex;
+      /* flex-wrap: wrap; */
       flex-direction: row;
       background-color: blue;
-      height: 100px;
+      height: 35px;
       justify-content: flex-start;
     }
+
     .feather-search {
       height: 20px;
     }
@@ -62,6 +65,7 @@
     }
     .profile {
       flex: 0 0 auto;
+      flex-direction: row;
       margin-left: auto;
       margin-right: 107px;
       background-color: blueviolet;
@@ -70,6 +74,24 @@
       font-size: 15px;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 800;
+    }
+
+    .second-row {
+      background-color: aquamarine;
+      height: 55px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      align-self: start;
+    }
+    .dashboard-grid {
+      display: grid;
+      background-color: brown;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
     }
   </style>
   <body>
@@ -128,7 +150,9 @@
           <p class="Name">Morgan Stanley</p>
         </div>
       </div>
+      <div class="second-row"></div>
       <div class="dashboard-grid"></div>
     </div>
   </body>
+  <!--TODO : Add more features -->
 </html>
