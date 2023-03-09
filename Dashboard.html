@@ -85,13 +85,24 @@
     }
     .dashboard-grid {
       display: grid;
-      background-color: brown;
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 4;
       grid-row-end: 5;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
+      grid-template-columns: repeat(3, minmax(200px, 400px));
+      grid-template-rows: repeat(3, minmax(200px, 400px));
+
+      grid-gap: 30px;
+      margin-left: 10px;
+    }
+    .dashboard-grid > div {
+      background-color: black;
+      /* height: minmax(150px, 450px); */
+      border-radius: 20px;
+    }
+    #3 {
+      grid-row-start: 1;
+      grid-row-end: 3;
     }
   </style>
   <body>
@@ -151,7 +162,17 @@
         </div>
       </div>
       <div class="second-row"></div>
-      <div class="dashboard-grid"></div>
+      <div class="dashboard-grid">
+        <div class="boxes" id="1"></div>
+        <div class="boxes" id="2"></div>
+        <div class="edge-boxes" id="3"></div>
+
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="boxes" id="6"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+      </div>
     </div>
   </body>
   <!--TODO : Add more features -->
